@@ -4,6 +4,8 @@ const https=require("https");
 const app=express();
 app.use(express.static("./frontend"));
 app.use(express.static("/public"));
+const cors=require('cors');
+app.use(cors());
 app.use(bodyparser.urlencoded({extended:true}));
 const mongoose=require("mongoose");
 require('dotenv').config();
